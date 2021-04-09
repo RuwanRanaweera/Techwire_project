@@ -1,0 +1,53 @@
+<ion-app>
+  <ion-menu side="start">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+      </ion-title>
+       <ion-img src='../../assets/techwire.jpeg'></ion-img>
+  </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item lines="none" routerLink="/dashboard">
+          <ion-icon name="home" slot="start"></ion-icon>
+          <ion-label>Dashboard</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item lines="none" routerLink="/gems/fixed-gems-list">
+          <ion-icon name="search-circle" slot="start"></ion-icon>
+          <ion-label>Fixed Gems </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item lines="none" routerLink="gems/bid-gems-list">
+          <ion-icon name="checkbox" slot="start"></ion-icon>
+          <ion-label>Bid Gems </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item lines="none" routerLink="/home">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-label>Profile</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+          
+      <ion-item lines="none"  (click)="onLogout()" button  >
+        <ion-icon name="log-out" slot="start"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>

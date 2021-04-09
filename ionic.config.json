@@ -1,0 +1,10 @@
+{
+  "name": "Techwire01",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,33 @@
+
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bid Gem List </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/new-gem">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card *ngFor="let gems of gemlistBid" class="gemCard" >
+    <ion-card-content>
+      <ion-thumbnail slot="start" class="img">
+        <ion-img [src]="gems.gemImage"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+          <h1>{{ gems.gemName }}</h1>
+          <h2>Rs:{{gems.price}}</h2>
+          <p>{{ gems.gemDescription}}</p>
+      </ion-label>
+
+    </ion-card-content>
+</ion-card>
+
+</ion-content>
+

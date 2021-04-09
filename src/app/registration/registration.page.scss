@@ -1,0 +1,52 @@
+// .home {
+//     background-image: url('../../assets/back.jpg');
+//     width: 100%;
+//     height: 100%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+
+.logginCard{
+
+    top: 20%;
+    background-color:white;
+    margin: 0px 30px 0px 30px ;
+    box-shadow: 1px 2px 10px 5px #5c5959;
+    border-radius:10px;
+
+}
+
+.button1{
+   width: 100%;
+   border-radius: 10px;
+  
+   padding: 0px 5px 0px 5px;
+}
+.login-input{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.title1{
+    
+    color:  black  ;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.cv1{
+    background-color: brown ;
+}
+
+.div1{
+    width: 100%;
+    height:100% ;
+    
+    background-image: linear-gradient(to right, rgb(75, 143, 170) , rgb(23, 98, 211));
+}
+
+.loggingInput{
+    padding: 0px ,0px,0px,0px;
+    background-color:lightblue;
+}
