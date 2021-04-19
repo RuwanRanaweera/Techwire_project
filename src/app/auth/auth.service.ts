@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  readonly baseURL = 'http://localhost:49789/api/User/Select';
+  readonly baseURL = 'http://localhost:49789/api/User/Select/';
 
   public _userIsAuthenticated = true;
   private _userId = 'abc';
@@ -41,8 +41,8 @@ export class AuthService {
 
 
 
-  getcourseDetailsFullList() {
-    return this.http.get(this.baseURL); 
+  getAllsellerList(id:number) {
+    return this.http.get(this.baseURL+id); 
     }
 
 

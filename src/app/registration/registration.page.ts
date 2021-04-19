@@ -43,12 +43,7 @@ export class RegistrationPage implements OnInit {
       });
   }
 
-  // onCreateGem() {
-  //   if (!this.form.valid) {
-  //     return;
-  //   }
-  //   console.log(this.form);
-  // }
+
 
   async onsingup() {
     try {

@@ -7,14 +7,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class GemsService {
-  readonly baseURL = 'http://localhost:49789/api/Gem/Select';
+  readonly baseURL = 'http://localhost:49789/api/Gem/Select/';
 
   constructor( private http: HttpClient) { }
 
 
 
-  getgemDetailsFullList() {
-    return this.http.get(this.baseURL); 
+  getgemDetailsFullList(userId:number) {
+    return this.http.get(this.baseURL+userId); 
     }
 
 

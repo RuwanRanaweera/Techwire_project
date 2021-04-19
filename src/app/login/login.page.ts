@@ -37,6 +37,9 @@ export class LoginPage implements OnInit {
       }));
       console.log(res);
       if (res.message == 'Success') {
+
+       localStorage.setItem('userID', res.data[0].Id )
+
         const toast = await this.toastCtrl.create({
           message: 'Successfully login',
           duration: 3000,

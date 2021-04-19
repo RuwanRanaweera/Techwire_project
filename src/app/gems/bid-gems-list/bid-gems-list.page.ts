@@ -17,13 +17,18 @@ export class BidGemsListPage implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+
+  }
+
+  ionViewWillEnter() {
     this.gemList();
   }
 
   gemlistBid=[];
 
   gemList() {
-    this.gemsService. getgemDetailsFullList().subscribe((res:any) => {
+    let id = +localStorage.getItem('userID')
+    this.gemsService. getgemDetailsFullList(id).subscribe((res:any) => {
       console.log(res.data);
       this.gemlist=res.data;
 

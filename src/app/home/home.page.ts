@@ -13,15 +13,22 @@ export class HomePage implements OnInit {
   constructor( public authService: AuthService) { }
 
   ngOnInit() {
-    this.refreshcourseDetailsList();
     
+    
+  }
+
+  ionViewWillEnter() {
+    this.refreshsellerList();
   }
 
 
   userDetails;
 
-refreshcourseDetailsList() {
-  this.authService.getcourseDetailsFullList().subscribe((res:any) => {
+refreshsellerList() {
+  
+  let id = +localStorage.getItem('userID')
+
+  this.authService.getAllsellerList(id).subscribe((res:any) => {
     console.log(res.data);
     this.userDetails=res.data;
   
