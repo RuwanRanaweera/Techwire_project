@@ -50,13 +50,13 @@ export class DashboardPage implements OnInit  {
     });
   }
 
-  // option = {
-  //   slidesPerView:1,
-  //   centeredSlides: true,
-  //   loop: true,
-  //   spaceBetween:10,
-  //   autoplay: true
-  // }
+  option = {
+    slidesPerView:1,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween:10,
+    autoplay: true
+  }
 
 
 }

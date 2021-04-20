@@ -8,16 +8,134 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1></h1>
-    <ion-card >
-  <ion-card-content  class="dashCard">
-<ion-label>
-   
-        <p class="para">Bid gem count : {{ this.gemlistBid.length}}</p>
-        <p class="para">Fix gem count : {{ this.gemlistFix.length}}</p>
-      
-    </ion-label>
-  </ion-card-content>
-  </ion-card>
+
+  <ion-grid style="height: 100%;">
+    <ion-row  style="height: 50%;" >
+      <ion-col style="height: 100%;" class="ion-align-self-center" size="12">
+        <div style="height: 100%;" class="ion-text-center" >
+          <ion-slides style="height: 100%;" [options]="option">
+
+            <ion-slide >
+              <div >
+            <ion-card >
+              <img src="../../assets/images/2.png">
+              <h2>Welcome To Techwire</h2>
+            </ion-card>
+          </div>
+         </ion-slide>
+        
+            <ion-slide>
+              <div >
+              <ion-card>
+                <img src="../../assets/images/1.jpg">
+                <h2>You can sell your gems this platform</h2>
+              </ion-card>
+              </div>
+            </ion-slide>
+        
+            <ion-slide>
+              <div >
+              <ion-card>
+                <img src="../../assets/images/10.jpg">
+                <h2>Our company help for that</h2>
+              </ion-card>
+              </div>
+              </ion-slide>
+        
+        
+            <ion-slide>
+              <div >
+              <ion-card>
+                <img src="../../assets/images/5.jpg">
+                <h2>Please go to the menu button</h2>
+              </ion-card>
+              </div>
+              </ion-slide>
+        
+            <ion-slide>
+              <div >
+              <ion-card>
+                <img src="../../assets/images/6.jpg">
+                <h2>Select your gem type </h2>
+              </ion-card>
+              </div>
+            </ion-slide>
+        
+            <ion-slide>
+              <div >
+              <ion-card>
+                <img src="../../assets/images/7.jpg">
+                <h2>Click add button</h2>
+              </ion-card>
+              </div>
+              </ion-slide>
+        
+              <ion-slide>
+                <div>
+                <ion-card>
+                  <img src="../../assets/images/11.jpg">
+                  <h2>Now you can give your gem details</h2>
+                </ion-card>
+              </div>
+                </ion-slide>
+        </ion-slides>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row style="height: 25%;">
+      <ion-col style="height: 100%;" size="6">
+          <ion-card style="height: 100%; width: 90%; background-color: red;"  routerLink="../gems/fixed-gems-list">
+            <!-- <h2>Please go to the menu button</h2> -->
+            <div >
+              <div  style="position: absolute; left: 10%; top: 10%; font-size: 30px; color: white;">
+                Fix Gems
+              </div>
+              <div style="position: absolute;  color: white; font-size: xx-large; bottom: 0; right: 5%; " >
+                {{ this.gemlistFix.length}}
+              </div>
+            </div>
+          </ion-card>
+      </ion-col>
+      <ion-col  size="6">
+          <ion-card class="add_color" style="height: 100%; width: 90%; background-color: rgb(49, 149, 231);"  routerLink="../gems/bid-gems-list">
+            <div >
+              <div  style="position: absolute; left: 10%; top: 10%; font-size: 30px; color: white;">
+                Bid Gems
+              </div>
+              <div style="position: absolute;  color: white; font-size: xx-large; bottom: 0; right: 5%; " >
+                {{ this.gemlistBid.length}}
+              </div>
+            </div>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row style="height: 25%;">
+      <ion-col size="6">
+          <ion-card style="height: 100%; width: 90%; background-color: rgb(0, 255, 34);" routerLink="../new-gem">
+            <div >
+              <div  style="position: absolute; left: 10%; top: 10%; font-size: 30px; color: white;">
+                Add Gems
+              </div>
+              <div style="position: absolute;  color: white; font-size: 50px; bottom: 0; right: 5%; " >
+                <ion-icon name="bag-add-outline"></ion-icon>
+              </div>
+            </div>
+          </ion-card>
+      </ion-col>
+      <ion-col  size="6">
+          <ion-card  style="height: 100%; width: 90%; background-color: rgb(255, 238, 0);">
+            <div >
+              <div  style="position: absolute; left: 10%; top: 10%; font-size: 30px; color: white;">
+                Fix Gems
+              </div>
+              <div style="position: absolute;  color: white; font-size: xx-large; bottom: 0; right: 5%; " >
+                {{ this.gemlistFix.length}}
+              </div>
+            </div>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
 
