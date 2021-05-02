@@ -53,7 +53,9 @@ export class RegistrationPage implements OnInit {
         email: this.form.value.email,
         address: this.form.value.address,
         password: this.form.value.password,
-        nic: this.form.value.nicnum
+        nic: this.form.value.nicnum,
+        userType: 1,
+        approve:0
       }));
 
       if (res.message == 'Success') {

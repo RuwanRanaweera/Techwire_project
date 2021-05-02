@@ -23,6 +23,7 @@ export class HomePage implements OnInit {
 
 
   userDetails;
+  userApprove =[];
 
 refreshsellerList() {
   
@@ -31,6 +32,14 @@ refreshsellerList() {
   this.authService.getAllsellerList(id).subscribe((res:any) => {
     console.log(res.data);
     this.userDetails=res.data;
+
+    let indx=0;
+    this.userDetails.forEach((user)=>{
+      if(user.approve){
+        this.userApprove[indx] = user;
+        indx++;
+      }
+    });
   
   });
 }

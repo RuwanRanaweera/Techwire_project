@@ -32,7 +32,7 @@ export class DashboardPage implements OnInit  {
          
       let indx=0;
       this.gemlist.forEach((gem)=>{
-        if(gem.gemBid){
+        if(gem.gemBid && gem.approve){
           this.gemlistBid[indx] = gem;
           indx++;
         }
@@ -40,7 +40,7 @@ export class DashboardPage implements OnInit  {
 
       let indxx=0;
       this.gemlist.forEach((gem)=>{
-        if(!gem.gemBid){
+        if(!gem.gemBid && gem.approve){
           this.gemlistFix[indxx] = gem;
           indxx++;
         }

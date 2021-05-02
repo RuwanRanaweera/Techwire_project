@@ -44,7 +44,7 @@ export class FixedGemsListPage implements OnInit {
 
       let indx=0;
       this.gemlist.forEach((gem)=>{
-        if(!gem.gemBid){
+        if(!gem.gemBid && gem.approve){
           this.gemlistFix[indx] = gem;
           indx++;
         }

@@ -115,7 +115,8 @@ export class NewGemPage implements OnInit {
             price:this.form.controls.price.value,
             gemBid:this.form.controls.type.value,
             userId:id,
-            gemImage:res[0]
+            gemImage:res[0],
+            approve:0
           }
 
          this.http.post('http://localhost:49789/api/Gem/insert',data).subscribe(
