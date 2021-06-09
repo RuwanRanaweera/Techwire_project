@@ -25,9 +25,9 @@ export class DashboardPage implements OnInit  {
   gemList() {
     let id = +localStorage.getItem('userID')
     this.gemsService.getgemDetailsFullList(id).subscribe((res:any) => {
-      console.log(res.data);
+     // console.log(res.data);
       this.gemlist=res.data;
-      console.log(this.gemlist.length);
+      //console.log(this.gemlist.length);
  
          
       let indx=0;

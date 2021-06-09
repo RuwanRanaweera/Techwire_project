@@ -38,7 +38,11 @@ const routes: Routes = [
         {
           path: 'new-gem',
           loadChildren: () => import('./gems/new-gem/new-gem.module').then( m => m.NewGemPageModule)
-        }
+        },
+  {
+    path: 'meeting',
+    loadChildren: () => import('./meeting/meeting.module').then( m => m.MeetingPageModule)
+  }
 ];
 
 @NgModule({

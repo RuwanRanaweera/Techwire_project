@@ -22,7 +22,7 @@ export class LoginPage implements OnInit {
         }),
         password: new FormControl(null, {
           updateOn: 'blur',
-          validators: [Validators.required]
+          validators: [Validators.required,Validators.minLength(3)]
         })
       });
   }

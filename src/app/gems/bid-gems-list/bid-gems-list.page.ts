@@ -16,6 +16,9 @@ export class BidGemsListPage implements OnInit {
     private gemsService: GemsService,
     private router: Router) { }
 
+goToLink(url: string){
+    window.open(url, "_blank");
+}
   ngOnInit() {
 
   }
@@ -29,7 +32,7 @@ export class BidGemsListPage implements OnInit {
   gemList() {
     let id = +localStorage.getItem('userID')
     this.gemsService. getgemDetailsFullList(id).subscribe((res:any) => {
-      console.log(res.data);
+      //console.log(res.data);
       this.gemlist=res.data;
 
       

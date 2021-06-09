@@ -39,9 +39,8 @@ export class NewGemPage implements OnInit {
         price: new FormControl(null, {
           updateOn: 'blur',
           validators: [Validators.required, Validators.min(1)]
-        },
-        ),
-        type: new FormControl('biff', {
+        }),
+        type: new FormControl('null', {
           validators: [Validators.required]
         },
         )
@@ -63,10 +62,12 @@ export class NewGemPage implements OnInit {
   selectedFileType: String;
  async onSelectFile(event) {
 
-    if( event.target.files[0].type === "image/jpeg" || event.target.files[0].type === "image/x-png"){
+    if( event.target.files[0].type === "image/jpeg" || event.target.files[0].type === "image/png" || event.target.files[0].type === "application/pdf"){
       this.selectedFileType = event.target.files[0].type;
       console.log("event :--- ", event.target.files[0].type)
       // image/x-png , image/jpeg
+      
+if( event.target.files[0].type !== "application/pdf"   )
       this.files = [];
       this.urls = [];
       if (event.target.files && event.target.files[0]) {
@@ -95,14 +96,13 @@ export class NewGemPage implements OnInit {
       });
 
       toast.present();
-    }
-    
-
-   
+    } 
   }
+
+
   uploadToFIrebase(){
     console.log(this.selectedFileType)
-    if( this.selectedFileType == "image/jpeg" || this.selectedFileType == "image/x-png") {
+    if( this.selectedFileType == "image/jpeg" || this.selectedFileType == "image/png"  || this.selectedFileType === "application/pdf") {
       this.firebaseService.uploadAnyImageToFirebase(this.files,"firebaseSampleTest").then(
         (res: string[])=>{
           console.log(res[0])
@@ -115,6 +115,7 @@ export class NewGemPage implements OnInit {
             price:this.form.controls.price.value,
             gemBid:this.form.controls.type.value,
             userId:id,
+            certificate:res[1],
             gemImage:res[0],
             approve:0
           }
@@ -122,7 +123,7 @@ export class NewGemPage implements OnInit {
          this.http.post('http://localhost:49789/api/Gem/insert',data).subscribe(
            res=>{
             console.log(res , 'Successfullly Saved ....!');
-            if(data.gemBid) {
+            if(!data.gemBid) {
               this.router.navigateByUrl('/gems/fixed-gems-list');
             } else {
               this.router.navigateByUrl('/gems/bid-gems-list');

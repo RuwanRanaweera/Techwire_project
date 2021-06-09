@@ -30,7 +30,7 @@ refreshsellerList() {
   let id = +localStorage.getItem('userID')
 
   this.authService.getAllsellerList(id).subscribe((res:any) => {
-    console.log(res.data);
+    //console.log(res.data);
     this.userDetails=res.data;
 
     let indx=0;

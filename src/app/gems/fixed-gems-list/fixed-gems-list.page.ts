@@ -39,7 +39,7 @@ export class FixedGemsListPage implements OnInit {
     let id = +localStorage.getItem('userID')
 
     this.gemsService. getgemDetailsFullList(id).subscribe((res:any) => {
-      console.log(res.data);
+     // console.log(res.data);
       this.gemlist=res.data;
 
       let indx=0;

@@ -36,6 +36,10 @@ export class RegistrationPage implements OnInit {
           updateOn: 'blur',
           validators: [Validators.required]
         }),
+        phnnum: new FormControl(null, {
+          updateOn: 'blur',
+          validators: [Validators.required]
+        }),
         password: new FormControl(null, {
           updateOn: 'blur',
           validators: [Validators.required, Validators.minLength(1)]
@@ -54,6 +58,7 @@ export class RegistrationPage implements OnInit {
         address: this.form.value.address,
         password: this.form.value.password,
         nic: this.form.value.nicnum,
+        phoneNumber:this.form.value.phnnum,
         userType: 1,
         approve:0
       }));
