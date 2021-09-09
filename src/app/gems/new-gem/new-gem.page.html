@@ -68,8 +68,9 @@
 
       </ion-col>
     </ion-row>
-
-    <input type="file" id="imageUpload" (change)="onSelectFile($event)" accept="image/png,image/gif,image/jpeg" >
+    <ion-label position="floating">Image Upload  (Jpeg,Png)</ion-label>
+    <input type="file" id="imageUpload" (change)="onSelectFile($event)" accept="image/png,image/gif,image/jpeg">
+    <ion-label position="floating">Certificate Upload  (pdf)</ion-label>
 
     <input type="file" id="imageUpload" (change)="onSelectFile($event)" accept="application/pdf" >
 
